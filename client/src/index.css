@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { color-scheme: dark; }
+  body { @apply bg-ink text-slate-200 font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; }
+  :focus-visible { @apply outline-none ring-2 ring-electric/70 ring-offset-2 ring-offset-ink; }
+  input[type='range'] { accent-color: #3B82F6; }
+}
+@layer components {
+  .field { @apply w-full rounded-lg border border-line bg-ink/60 px-3 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 focus:border-electric focus:outline-none focus:ring-1 focus:ring-electric; }
+  .field-error { @apply border-crit/70; }
+  .light-section { @apply bg-mist text-slate-800; }
+}
